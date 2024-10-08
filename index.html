@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cartões em Flexbox</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cartao">
+            <h3>Cartão 1</h3>
+            <p>Descrição do cartão 1.</p>
+        </div>
+        <div class="cartao">
+            <h3>Cartão 2</h3>
+            <p>Descrição do cartão 2.</p>
+        </div>
+        <div class="cartao">
+            <h3>Cartão 3</h3>
+            <p>Descrição do cartão 3.</p>
+        </div>
+        <div class="cartao">
+            <h3>Cartão 4</h3>
+            <p>Descrição do cartão 4.</p>
+        </div>
+    </div>
+</body>
+</html>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem; /* Espaço entre os cartões */
+}
+
+.cartao {
+    background-color: rgba(143, 0, 130, 1); /* Cor de fundo do cartão */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: calc(50% - 3rem); /* Dois cartões por linha, com margem */
+}
